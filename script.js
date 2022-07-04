@@ -15,3 +15,33 @@ function numberRequest() {
         }
     }
 }
+
+function alertCorrect() {
+    alert("HAI INDOVINATO!!: " + correct);
+}
+
+for (let i = 0; i < 5; i++) {
+    do {
+        randomNumber = Math.floor((Math.random() * 100) + 1);
+        console.log(randomNumber);
+    } while (gameRandomNumber.includes(randomNumber));
+    gameRandomNumber.push(randomNumber);
+    console.log(gameRandomNumber);
+}
+
+gameNumbers.innerText = gameRandomNumber;
+
+let count = 30;
+
+gameTimer.innerText = count;
+
+const timer = setInterval(() => {
+    gameTimer.innerText = --count;
+
+    if (count == 0) {
+        clearInterval(timer);
+        gameNumbers.classList.add('d-none');
+    }
+}, 100);
+
+
