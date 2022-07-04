@@ -1,0 +1,15 @@
+* {
+    text-decoration: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: skyblue
+}
+
+.game-txt {
+    font-size: 50px;
+    font-weight: bold;
+}
